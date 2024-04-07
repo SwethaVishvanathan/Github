@@ -1,9 +1,11 @@
-package com.example.github.solution3
+package com.example.github
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.example.github.CachedRepository
+import com.example.github.Repository
 
 
 @Dao

@@ -1,4 +1,4 @@
-package com.example.github.solution3
+package com.example.github
 
 class RepositoryRepository(private val githubService: GitHubService, private val repositoryDao: RepositoryDao){
 

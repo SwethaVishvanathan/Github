@@ -1,4 +1,4 @@
-package com.example.github.google
+package com.example.github
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.Box

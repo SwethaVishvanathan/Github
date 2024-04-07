@@ -1,4 +1,4 @@
-package com.example.github.solution3
+package com.example.github
 
 data class Repository(
     val id: Long,

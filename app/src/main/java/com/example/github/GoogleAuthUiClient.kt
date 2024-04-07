@@ -1,9 +1,8 @@
-package com.example.github.google
+package com.example.github
 
 import android.content.Context
 import android.content.Intent
 import android.content.IntentSender
-import com.example.github.R
 import com.google.android.gms.auth.api.identity.BeginSignInRequest
 import com.google.android.gms.auth.api.identity.BeginSignInRequest.GoogleIdTokenRequestOptions
 import com.google.android.gms.auth.api.identity.SignInClient

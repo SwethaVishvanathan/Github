@@ -1,21 +1,16 @@
-package com.example.github.solution3
+package com.example.github
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import okhttp3.OkHttpClient
-import okhttp3.Request
+import com.example.github.Repository
 
 @Composable
-fun RepositoryItem(repository:Repository) {
+fun RepositoryItem(repository: Repository) {
     Card(
         modifier = Modifier
             .fillMaxWidth()

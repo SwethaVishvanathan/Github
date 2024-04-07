@@ -1,4 +1,4 @@
-package com.example.github.solution3
+package com.example.github
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf

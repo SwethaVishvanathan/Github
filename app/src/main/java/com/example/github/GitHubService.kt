@@ -1,4 +1,4 @@
-package com.example.github.solution3
+package com.example.github
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path

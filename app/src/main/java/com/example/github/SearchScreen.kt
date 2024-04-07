@@ -1,4 +1,4 @@
-package com.example.github.solution3
+package com.example.github
 
 import android.content.Context
 import android.net.ConnectivityManager
@@ -15,9 +15,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
+import com.example.github.RepositoryViewModel
 
 @Composable
-fun SearchScreen(viewModel:RepositoryViewModel) {
+fun SearchScreen(viewModel: RepositoryViewModel) {
     var query by remember { mutableStateOf(TextFieldValue()) }
     val context = LocalContext.current
     val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager

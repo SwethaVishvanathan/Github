@@ -1,6 +1,8 @@
-package com.example.github.google
+package com.example.github
 
 import androidx.lifecycle.ViewModel
+import com.example.github.SignInResult
+import com.example.github.SignInState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update

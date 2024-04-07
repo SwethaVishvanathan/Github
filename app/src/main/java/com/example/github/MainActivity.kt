@@ -7,13 +7,13 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.result.IntentSenderRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -21,16 +21,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.google.android.gms.auth.api.identity.Identity
-import com.example.github.google.ProfileScreen
-import com.example.github.google.GoogleAuthUiClient
-import com.example.github.google.SignInScreen
-import com.example.github.google.SignInViewModel
-import com.example.github.solution3.RepositoryItem
 import com.example.github.ui.theme.GithubTheme
 import kotlinx.coroutines.launch
-import kotlin.math.sign
 
 class MainActivity : ComponentActivity() {
+    // Declare the launcher at the top of your Activity/Fragment:
 
     private val googleAuthUiClient by lazy {
         GoogleAuthUiClient(
@@ -81,7 +76,6 @@ class MainActivity : ComponentActivity() {
                                         "Sign in successful",
                                         Toast.LENGTH_LONG
                                     ).show()
-
                                     navController.navigate("profile")
                                     viewModel.resetState()
                                 }
@@ -113,10 +107,21 @@ class MainActivity : ComponentActivity() {
                                             Toast.LENGTH_LONG
                                         ).show()
 
-                                        navController.navigate("RepositoryListScreen")
+                                        navController.navigate("MyApp()")
                                     }
                                 }
                             )
+                        }
+                        composable("MyApp()") {
+                            val newMessageReceived = AppState.newMessageReceived
+                            Column {
+                                if (newMessageReceived) {
+                                    Text("SignedIn Successfully", color = Color.Red)
+                                    navController.navigate("RepositoryListScreen")
+                                } else {
+                                    Text("You are not able to use the app")
+                                }
+                            }
                         }
                     }
                 }
